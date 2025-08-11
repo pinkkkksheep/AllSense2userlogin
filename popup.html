@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forum to Map</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+  <!--Reference 
+ https://virtualspeech.com/blog/vr-applications
+
+https://futuclass.com/blog/7-benefits-of-virtual-reality-explained/
+
+https://bernardmarr.com/the-effects-of-virtual-reality-vr-on-society/
+
+https://www.frontiersin.org/journals/virtual-reality/articles/10.3389/frvir.2022.1031697/full
+
+https://theconversation.com/virtual-reality-has-negative-side-effects-new-research-shows-that-can-be-a-problem-in-the-workplace-210532
+
+https://www.techmonitor.ai/technology/emerging-technology/is-virtual-reality-bad-for-mental-health
+-->
+  
+<!-- Section 0: Slideshow -->
+<section class="section" id="section0">
+  <div class="slideshow-container">
+    <div class="slide active">
+      <img class="slide-img" src="images/setion0.1.jpg" alt="Slide 1">
+      <audio class="slide-audio" src="sound/section 0.1.mp3"></audio>
+    </div>
+    <div class="slide">
+      <img class="slide-img" src="images/section0.2.jpg" alt="Slide 2">
+      <audio class="slide-audio" src="sound/2.mp3"></audio>
+    </div>
+    <div class="slide">
+      <img class="slide-img" src="images/section0.3.jpg" alt="Slide 3">
+      <audio class="slide-audio" src="sound/3.mp3"></audio>
+    </div>
+    <div class="slide">
+      <img class="slide-img" src="images/section0.4.jpg" alt="Slide 4">
+      <audio class="slide-audio" src="sound/4.mp3"></audio>
+    </div>
+
+    <div class="slideshow-controls">
+      <button id="prevSlide" class="start-btn">Prev</button>
+      <button id="nextSlide" class="start-btn">Next</button>
+    </div>
+  </div>
+</section>
+
+
+  <!--This is section 1 -->
+  <section class="section" id="section1">
+  <div class="media" style="position: relative;">
+    <video id="section1Video" muted playsinline style="width:80vw; max-width:80vw; height:80vh; max-height:80vh; border-radius:16px; box-shadow:0 0 24px #00eaff, 0 0 48px #ff69b4; background:#000;">
+      <source src="world 1.mp4" type="video/mp4">
+    </video>
+    <audio id="section1Audio">
+      <source src="sound/world 1 new.mp3" type="audio/mpeg">
+    </audio>
+   <button id="startSection1Btn" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); border:none; background:none; padding:0; cursor:pointer;">
+  <img src="images/play button.png" alt="Play" style="width:80px; height:80px; display:block;">
+</button>
+
+    
+  </div>
+  <div class="buttons">
+    <button class="exit-btn1" onclick="exitSection()">Exit</button>
+  </div>
+</section>
+
+
+  <!-- Section 2: Forum -->
+  <section class="section" id="section2">
+  <div class="map-icon" onclick="goToMap()">🗺️</div>
+
+  <div class="forum">
+    <div class="post">
+      <h3>bluuesheep222</h3>
+      <p>Check out the new update on the playground map! The visual quality is way better now — everything looks so much sharper. The scenery feels more alive, and you can almost feel the fresh air around you!</p>
+      <button class="more-btn">Reply</button>
+    </div>
+    <div class="post">
+      <h3>LaLa1234</h3>
+      <p>Just used the updated playground map and it’s amazing! The improved visuals and detailed environment really add to the realism. It’s got that crisp, fresh-air vibe and stunning scenery all around.</p>
+      <button class="more-btn">Reply</button>
+    </div>
+    <div class="post">
+      <h3>GameMaster91</h3>
+      <p>The lighting effects on the new map update are incredible. Shadows move realistically and it really immerses you into the environment.</p>
+      <button class="more-btn">Reply</button>
+    </div>
+    <div class="post">
+      <h3>PixelFanatic</h3>
+      <p>I love how the trees sway with the wind now. Small details like this make a huge difference!</p>
+      <button class="more-btn">Reply</button>
+    </div>
+    <div class="post">
+      <h3>RogueRanger</h3>
+      <p>The updated map made my exploration way more enjoyable. No glitches so far and it loads really smooth on my device.</p>
+      <button class="more-btn">Reply</button>
+    </div>
+    <div class="post">
+      <h3>CraftyCoder</h3>
+      <p>Really appreciate the effort the devs put into this update. The textures feel so much more detailed and the colors pop beautifully!</p>
+      <button class="more-btn">Reply</button>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Section 3: Map -->
+   <!--I used Copilot here to help me fix up the function for map 1, i wanted it to show the next section, yet it was not showing that due to the onclick=alert-->
+  <section class="section hidden" id="section3">
+    <div class="monologue">Maps You Own</div>
+   <div class="map-grid">
+  <div class="map-item" id="map1">
+    <img src="images/playgroundnew.jpg" alt="Map 1">
+  </div>
+  <div class="map-item" onclick="alert('Clicked 2')">
+    <img src="images/gallery.jpg" alt="Map 2">
+  </div>
+  <div class="map-item" onclick="alert('Clicked 3')">
+    <img src="images/bridge.jpg" alt="Map 3">
+  </div>
+  <div class="map-item" onclick="alert('Clicked 4')">
+    <img src="images/garden.jpg" alt="Map 4">
+  </div>
+  <div class="map-item" onclick="alert('Clicked 5')">
+    <img src="images/osaka.jpg" alt="Map 5">
+  </div>
+  <div class="map-item" onclick="alert('Clicked 6')">
+    <img src="images/concert.jpg" alt="Map 6">
+  </div>
+  <div class="map-item" onclick="alert('Clicked 7')">
+    <img src="images/IMG_1872.jpg" alt="Map 7">
+  </div>
+  <div class="map-item" onclick="alert('Clicked 8')">
+    <img src="images/ground.jpg" alt="Map 8">
+  </div>
+</div>
+
+  </section>
+
+<!--This is section4 -->
+  <section class="section hidden" id="section4">
+  <div class="video-container">
+    <video id="locationVideo" muted playsinline style="width:100%; height:auto; display:block;">
+      <source src="video/loading .mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<!--This is section 5-->
+<section class="section hidden" id="section5">
+  <div class="monologue">“"PlayGroud" Map update successful”</div>
+  <div class="buttons">
+    <button id="startBtn" class="start-btn">Immerse Now</button>
+  </div>
+</section>
+<!-- This is Section 6 -->
+<section class="section hidden" id="section6">
+  <div class="video-container" style="position:relative;">
+    <video id="locationVideo6" playsinline style="width:100%; height:auto; display:block;">
+      <source src="world2.mp4" type="video/mp4">
+    </video>
+    <audio id="locationAudio6" src="sound/world 2 new.mp3" preload="auto"></audio>
+    <button id="startSection1Btn6" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); border:none; background:none; padding:0; cursor:pointer;">
+      <img src="images/play button.png" alt="Play" style="width:80px; height:80px; display:block;">
+    </button>
+  </div>
+</section>
+
+<!-- This is Section 6.1 -->
+<section class="section hidden" id="section6-1">
+  <div class="video-container">
+    <video id="locationVideo6-1" muted playsinline style="width:100%; height:auto; display:block;">
+      <source src="video/time new.MOV" type="video/quicktime">
+    </video>
+  </div>
+</section>
+
+
+
+<!-- This is section 7-->
+
+<section class="section hidden" id="section7">
+    <video id="section7Video" muted playsinline controls  style="width:80vw; max-width:80vw; height:80vh; max-height:80vh; display:block; border-radius:16px; box-shadow:0 0 24px #00eaff, 0 0 48px #ff69b4; background:#000;">
+     <source src="video/cctv new_1.mp4" type="video/mp4">
+       <audio id="section7Audio" src="sound/cctv new.mp3" preload="auto"></audio>
+    </video>
+  </div>
+</section>
+
+<!--This is Section 8: Forum -->
+<section class="section hidden" id="section8">
+  <div class="forum">
+    <div class="post">
+      <h3>Admin</h3>
+      <p>The map issue has been fixed! You can now use it again without any problems. Happy exploring!</p>
+      <button class="more-btn">Reply</button>
+    </div>
+  </div>
+  <button id="exitForum8" class="start-btn">Exit to Immerse</button>
+</section>
+
+<script src="popup.js"></script>
+</body>
+</html>
+
+
+
+  <script src="popup.js"></script>
+</body>
+</html>
