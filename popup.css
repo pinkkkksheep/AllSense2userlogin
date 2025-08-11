@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', Arial, sans-serif;
+  overflow: hidden;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d1b4c 0%, #3b1e6e 50%, #030630 100%);
+  background-size: 400% 400%;
+  animation: galaxyShift 15s ease infinite;
+  color: #e0e7ff;
+}
+
+@keyframes galaxyShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.slideshow-container {
+  position: relative;
+  width: 85vw;
+  height: 75vh;
+  margin: 0 auto;
+  background: rgba(20,20,40,0.8);
+  border-radius: 20px;
+  box-shadow: 0 0 32px #00eaff, 0 0 64px #ff69b4;
+  overflow: hidden; 
+}
+.slide-img {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;        
+  height: 100%;       
+  object-fit: fill;    
+  opacity: 0;
+  transition: opacity 0.5s;
+  border-radius: 18px;
+  box-shadow: 0 0 24px #00eaff, 0 0 48px #ff69b4;
+}
+
+
+
+.slide-img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slideshow-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 3;
+}
+
+/*This is for section 1*/
+
+#section1 {
+  cursor: url('images/IMG_2462.png') 16 16, auto;
+}
+
+.section {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: all 0.8s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 80vh;
+}
+
+#section1Video {
+  width: 90vw;
+  max-width: 90vw;
+  height: 90vh;
+  max-height: 90vh;
+  border-radius: 16px;
+  box-shadow: 0 0 24px #00eaff, 0 0 48px #ff69b4;
+  background: #000;
+  display: block;
+}
+
+#section1 .buttons {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 10;
+  background: none;
+  pointer-events: none; 
+}
+#section1 .exit-btn1 {
+  pointer-events: auto;
+  padding: 12px 28px;
+  background: linear-gradient(90deg, #00eaff 0%, #ff69b4 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 1.1rem;
+  box-shadow: 0 0 16px #00eaff;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+#section1 .exit-btn1:hover {
+  background: linear-gradient(90deg, #ff69b4 0%, #00eaff 100%);
+  box-shadow: 0 0 32px #ff69b4;
+} 
+
+/*This is for map section*/
+.map-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(30,30,60,0.8);
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0 0 12px #00eaff, 0 0 24px #ff69b4;
+  border: 2px solid #fff;
+  color: #fff;
+  transition: box-shadow 0.3s;
+  z-index: 10;
+}
+
+.map-icon:hover {
+  box-shadow: 0 0 24px #fff, 0 0 48px #00eaff;
+}
+
+.forum {
+  margin-top: 80px;
+  width: 80%;
+  max-height: 400px;        
+  overflow-y: auto;        
+  background: rgba(20,20,40,0.7);
+  border-radius: 20px;
+  box-shadow: 0 0 30px #fff, 0 0 60px #ff69b4;
+  border: 2px solid #00eaff;
+  padding: 30px;
+}
+
+/*this is for section3*/
+.forum::-webkit-scrollbar {
+  width: 12px;
+}
+
+.forum::-webkit-scrollbar-track {
+  background: rgba(30,30,60,0.4);
+  border-radius: 10px;
+}
+
+.forum::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #00eaff, #ff69b4);
+  border-radius: 10px;
+  border: 3px solid rgba(30,30,60,0.4);
+}
+
+.post {
+  background: rgba(40,40,80,0.9);
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #ff69b4;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #ff69b4, 0 0 20px #00eaff;
+  color: #fff;
+}
+
+.more-btn {
+  margin-top: 10px;
+  padding: 8px 18px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #00eaff 0%, #ff69b4 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 0 8px #00eaff;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.more-btn:hover {
+  background: linear-gradient(90deg, #ff69b4 0%, #00eaff 100%);
+  box-shadow: 0 0 16px #ff69b4;
+}
+
+.slide-up {
+  animation: slideUp 0.8s forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/*section 3 I used copilot to help me fix the size of the map and the images abit*/
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px; /* bigger gap between items */
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.map-item {
+  background: rgba(60,60,120,0.9);
+  padding: 24px 16px; /* more padding */
+  text-align: center;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  color: #fff;
+  font-size: 1.4rem; /* bigger text */
+  border: 2px solid #00eaff;
+  box-shadow: 0 0 16px #00eaff, 0 0 32px #ff69b4;
+  font-family: 'Orbitron', Arial, sans-serif;
+  min-height: 260px; /* taller box */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.map-item img {
+  width: 200px;   
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 16px;
+  box-shadow: 0 0 16px #00eaff, 0 0 32px #ff69b4;
+  display: block;
+}
+
+.map-item:hover {
+  background: rgba(80,0,120,0.9);
+  box-shadow: 0 0 24px #ff69b4, 0 0 48px #fff;
+  border-color: #ff69b4;
+}
+
+
+/*section 4*/
+
+.exit-btn2 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  padding: 10px 24px;
+  background: linear-gradient(90deg, #00eaff 0%, #ff69b4 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 1.1rem;
+  box-shadow: 0 0 12px #00eaff;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  display: none; /* JS will show it */
+}
+
+.exit-btn1:hover {
+  background: linear-gradient(90deg, #ff69b4 0%, #00eaff 100%);
+  box-shadow: 0 0 24px #ff69b4;
+}
+
+.section.hidden {
+  display: none;
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.start-btn {
+  padding: 12px 32px;
+  background: linear-gradient(90deg, #00eaff 0%, #ff69b4 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 1.2rem;
+  box-shadow: 0 0 16px #00eaff;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  margin-top: 24px;
+}
+
+.start-btn:hover {
+  background: linear-gradient(90deg, #ff69b4 0%, #00eaff 100%);
+  box-shadow: 0 0 32px #ff69b4;
+}
+
+#section6 {
+  cursor: url('images/IMG_2462.png') 16 16, auto;
+}
+
+#section7 .video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+#section7 .video-container video {
+  width: 80vw;
+  max-width: 80vw;
+  height: 80vh;
+  max-height: 80vh;
+  display: block;
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 0 32px #00eaff, 0 0 64px #ff69b4;
+  background: #000;
+}
+

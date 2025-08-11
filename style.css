@@ -1,0 +1,106 @@
+/*This css is for the logon page*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #a7c5ff, #f2a8ff, #c3f0f9);
+  background-size: 300% 300%;
+  animation: gradientBG 10s ease infinite;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.login-container {
+  text-align: center;
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 20px #fff;
+  object-fit: cover;
+}
+
+.welcome-text {
+  font-size: 2.5em;
+  margin: 20px 0 10px;
+  text-shadow:  0 0 10px white;
+  font-weight: 800;
+}
+
+.usage-info {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  color: #ffffff;
+}
+
+.profile-info {
+  margin: 15px auto 30px;
+  text-align: left;
+  background-color: rgba(233, 177, 255, 0.76);
+  padding: 15px 20px;
+  border-radius: 12px;
+  width: 80%;
+  font-size: 0.95em;
+  line-height: 1.6em;
+  box-shadow: 0 0 10px rgba(77, 220, 220, 0.607);
+}
+
+.profile-info strong {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 8px cyan;
+}
+
+.glow-button {
+  padding: 15px 40px;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  background: transparent;
+  border: 2px solid rgb(227, 179, 255);
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgb(255, 255, 255), 0 0 30px rgb(255, 255, 255);
+  transition: all 0.3s ease;
+}
+
+.glow-button:hover {
+  background-color: rgba(169, 230, 245, 0.885);
+  box-shadow: 0 0 25px rgba(196, 225, 255, 0.844), 0 0 50px rgb(156, 232, 255);
+  transform: scale(1.05);
+}
+
+/* Full screen pop-up */
+.popup-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom right, #0d1b2a, #1b263b);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 1s ease;
+}
+ 
